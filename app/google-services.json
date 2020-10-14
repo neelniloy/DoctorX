@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "171505362654",
+    "firebase_url": "https://hellodoctor-9c315.firebaseio.com",
+    "project_id": "hellodoctor-9c315",
+    "storage_bucket": "hellodoctor-9c315.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171505362654:android:902b930eb49f2a3a36444f",
+        "android_client_info": {
+          "package_name": "com.sarker.hellodoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171505362654-b4fd1m977nhl1tf321g9qbcta7l17if7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_R-S1UmpCY2NXRxr37kR5kzca0D1gF8g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171505362654-b4fd1m977nhl1tf321g9qbcta7l17if7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
