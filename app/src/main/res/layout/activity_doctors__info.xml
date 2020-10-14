@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Doctors_Info">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Details"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="35dp">
+
+    </TextView>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/doctorImageId"
+        android:src="@drawable/avatar"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="96dp"
+        android:layout_height="96dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/doctorNameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Dr. Raz kabir"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="37dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/doctorDegreeId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="MBBS(Dhaka), BCS(Health)"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/doctorDesignationId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Medicine Specialist"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/doctorPhoneId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Phone No: 01765432101"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/doctorTimeId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Available: 6pm-10pm"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="27dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/doctorDateId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="(Except Friday)"
+        android:padding="5dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@android:color/black"
+        android:textSize="18dp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/appointmentButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="45dp"
+        android:text="Get Appointment"
+        android:textAllCaps="false"
+        android:textSize="30dp">
+
+    </Button>
+
+
+
+
+</LinearLayout>
