@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin">
+    tools:context=".fragment.AdminPanel">
 
-    <ImageView
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="25dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:id="@+id/signOut"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/ic_signout" />
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -50,7 +39,7 @@
         android:textSize="16sp"
         android:background="@drawable/custom_button"
         android:textColor="@color/colorWhite"
-        android:text="View Doctor List"
+        android:text="Manage Doctor Information"
         android:textAllCaps="false"
         />
 

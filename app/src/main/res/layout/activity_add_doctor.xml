@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddDoctor">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_back"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tv_add_new_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="Add New Doctor Info"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/tv_add_new_student"
+        android:layout_above="@+id/btn_add_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/doctorProfile"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@drawable/doctor_icon"
+                    app:civ_border_width=".5dp"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"/>
+
+                <ImageView
+                    android:layout_marginBottom="10dp"
+                    android:layout_toEndOf="@+id/doctorProfile"
+                    android:layout_above="@+id/l1"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_edit"
+                    android:id="@+id/edit_doctor_profile"/>
+
+                <LinearLayout
+                    android:layout_below="@+id/doctorProfile"
+                    android:layout_margin="10dp"
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextNameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundColor="@color/colorWhite"
+                        android:hint="Doctor Name"
+                        app:endIconMode="clear_text"
+                        android:layout_marginBottom="10dp"
+                        app:startIconTint="#00A650"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_doctor_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextDesignationLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundColor="@color/colorWhite"
+                        android:hint="Designation"
+                        app:endIconMode="clear_text"
+                        android:layout_marginBottom="10dp"
+                        app:startIconTint="#00A650"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_designation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/text_input_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Choose Department"
+                        app:endIconMode="dropdown_menu"
+                        android:layout_marginBottom="10dp"
+                        app:hintTextColor="@color/colorPrimary">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/departmentDropdown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:paddingStart="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingRight="10dp"
+                            android:textCursorDrawable="@null" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextDegreeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundColor="@color/colorWhite"
+                        android:hint="Degree"
+                        app:endIconMode="clear_text"
+                        android:layout_marginBottom="10dp"
+                        app:startIconTint="#00A650"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_degree"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextHospitalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundColor="@color/colorWhite"
+                        android:hint="Hospital Name"
+                        app:endIconMode="clear_text"
+                        android:layout_marginBottom="10dp"
+                        app:startIconTint="#00A650"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_hospital_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gender:"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+
+                        <RadioGroup
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/radioGroup"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/g_m"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Male"
+                                android:textColor="@color/colorBlack" />
+
+                            <RadioButton
+                                android:id="@+id/g_f"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Female"
+                                android:textColor="@color/colorBlack" />
+
+                            <RadioButton
+                                android:id="@+id/g_c"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Custom"
+                                android:textColor="@color/colorBlack" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextContactLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundColor="@color/colorWhite"
+                        android:hint="Contact Number"
+                        app:endIconMode="clear_text"
+                        android:layout_marginBottom="10dp"
+                        app:startIconTint="#00A650"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_contact_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/editTextVisitingHourLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxBackgroundMode="outline"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxBackgroundColor="@color/colorWhite"
+                        android:hint="Visiting Hour"
+                        app:endIconMode="clear_text"
+                        android:layout_marginBottom="10dp"
+                        app:startIconTint="#00A650"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_visiting_our"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_add_doctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Information"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:background="@drawable/custom_button"
+        android:elevation="25dp"
+        android:textAllCaps="false"
+        />
+
+</RelativeLayout>

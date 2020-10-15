@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Appointment">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_back"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="Appointment"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/appointment"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/tv_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Appointment to :"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_marginStart="20dp"
+        android:id="@+id/tv_select_time"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/tv_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        >
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Select Time :"
+            android:textColor="@color/colorBlack"
+            android:textSize="15.5sp"/>
+
+        <Button
+            android:id="@+id/cv_time"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:background="@drawable/custom_button"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_select_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        >
+
+        <TextView
+            android:id="@+id/select_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Select Date :"
+            android:textColor="@color/colorBlack"
+            android:textSize="15.5sp"/>
+
+        <Button
+            android:id="@+id/cv_select_date"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:background="@drawable/custom_button"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_confirm_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Appointment"
+        android:textColor="#ffff"
+        android:textSize="16sp"
+        android:background="@drawable/custom_button"
+        android:elevation="25dp"
+        android:textAllCaps="false"
+        />
+
+</RelativeLayout>

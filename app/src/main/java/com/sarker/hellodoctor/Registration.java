@@ -184,6 +184,8 @@ public class Registration extends AppCompatActivity {
         reg.put("userEmail", email);
         reg.put("userPhone", phone);
         reg.put("userType", "none");
+        reg.put("userBlood", "none");
+        reg.put("userImage", " ");
         reg.put("userUID", user_id);
         reg.put("userMembershipTime",saveCurrentTime);
         reg.put("userMembershipDate",saveCurrentDate);

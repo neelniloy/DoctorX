@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.sarker.hellodoctor">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".OfflineFirebase"
@@ -9,8 +15,14 @@
         android:label="DoctorX"
         android:roundIcon="@drawable/doctor_icon"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Admin"></activity>
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <activity android:name=".Appointment"></activity>
+        <activity android:name=".DoctorDetails" />
+        <activity android:name=".DoctorList" />
+        <activity
+            android:name=".AddDoctor"
+            android:theme="@style/Theme.MyApp" />
         <activity
             android:name=".Login"
             android:theme="@style/Theme.MyApp" />
@@ -29,6 +41,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
     </application>
 
 </manifest>
