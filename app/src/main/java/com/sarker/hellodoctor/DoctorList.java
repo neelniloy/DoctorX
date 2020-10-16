@@ -145,9 +145,11 @@ public class DoctorList extends AppCompatActivity {
                     holder.Degree.setText(search.getDoctorDegree());
                 }
 
+                String url = search.getDoctorImage();
+                if (!url.equals(" ")){
+                    Picasso.get().load(url).fit().centerInside().placeholder(R.drawable.doctor_icon).into(holder.Image);
+                }
 
-
-                Picasso.get().load(search.getDoctorImage()).fit().centerInside().placeholder(R.drawable.doctor_icon).into(holder.Image);
 
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
