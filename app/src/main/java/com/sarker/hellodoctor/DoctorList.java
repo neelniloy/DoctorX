@@ -106,6 +106,9 @@ public class DoctorList extends AppCompatActivity {
                     searchStudent(capitalizedString.toString().trim());
 
                 }
+                else {
+                    searchStudent(search.getText().toString());
+                }
 
 
             }
