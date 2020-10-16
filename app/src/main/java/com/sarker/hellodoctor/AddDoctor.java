@@ -214,9 +214,9 @@ public class AddDoctor extends AppCompatActivity {
                 else if (!(name.isEmpty() && designation.isEmpty() && degree.isEmpty() && hospital.isEmpty() && phone.isEmpty() && hour.isEmpty())) {
 
                     progressDialog = new ProgressDialog(AddDoctor.this);
-                    progressDialog.show();
                     progressDialog.setCanceledOnTouchOutside(false);
                     progressDialog.setMessage("Adding Information...");
+                    progressDialog.show();
 
                     if (resultUri!= null) {
                         SaveChange();
@@ -250,6 +250,9 @@ public class AddDoctor extends AppCompatActivity {
     }
 
     private void sendUserData() {
+
+        progressDialog.dismiss();
+
 
         String name = Name.getText().toString();
         String designation = Designation.getText().toString();
@@ -295,16 +298,15 @@ public class AddDoctor extends AppCompatActivity {
         reg.put("addedTime",saveCurrentTime);
         reg.put("addedDate",saveCurrentDate);
 
-        DoctorRef.child(department).child(name.replaceAll("\\s+", "")+getDateInMillis(saveCurrentTime)).updateChildren(reg);
+        DoctorRef.child(department).child(name.replaceAll("[^a-zA-Z0-9]", "")+getDateInMillis(saveCurrentTime)).updateChildren(reg);
 
 
-        progressDialog.dismiss();
         Toast.makeText(AddDoctor.this, "Information Successfully Added", Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(AddDoctor.this,MainActivity.class);
-        intent.putExtra("from","addDoctor");
-        startActivity(intent);
-        finish();
+        Intent i = new Intent(AddDoctor.this, MainActivity.class);
+        i.putExtra("from","addDoctor");
+        startActivity(i) ;
+        finishAffinity();
 
 
     }
