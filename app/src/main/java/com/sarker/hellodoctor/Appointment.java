@@ -13,6 +13,7 @@ import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ public class Appointment extends AppCompatActivity {
     private TextView appointmentTo;
     private String format,h1,m1,sTime;
     private ProgressDialog progressDialog;
+    private ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class Appointment extends AppCompatActivity {
         confirm = findViewById(R.id.btn_confirm_appointment);
         time = findViewById(R.id.cv_time);
         date = findViewById(R.id.cv_select_date);
+        back = findViewById(R.id.back);
 
         Intent i = getIntent();
         String name = i.getStringExtra("name");
@@ -139,6 +142,13 @@ public class Appointment extends AppCompatActivity {
                 datePickerDialog.show();
 
 
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
 

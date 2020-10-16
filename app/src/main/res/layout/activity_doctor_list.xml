@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/empty_data"
         android:layout_centerInParent="true"
+        android:layout_below="@+id/search_field"
         android:id="@+id/emptya_data"/>
 
     <ImageView

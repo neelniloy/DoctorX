@@ -57,11 +57,24 @@
 
         </androidx.cardview.widget.CardView>
 
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/cardView1"
+            android:layout_gravity="bottom"
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:alpha="0.5"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/colorBlack" />
+
         <TextView
-            android:layout_marginTop="10dp"
+            android:id="@+id/category"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
             android:layout_below="@+id/cardView1"
-            android:text="Doctors Category"
+            android:text="Doctor's Category"
             android:textSize="24sp"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold"
@@ -69,10 +82,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <View
+            android:layout_below="@+id/category"
+            android:layout_gravity="bottom"
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:alpha="0.5"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/colorBlack" />
+
 
     </RelativeLayout>
 
+
+
     <GridLayout
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:layout_weight="8"
